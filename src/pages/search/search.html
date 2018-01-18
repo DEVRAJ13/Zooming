@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>search</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+  <ion-searchbar [(ngModel)]="searchQuery" (input)="searchGIFs()" placeholder="Search"></ion-searchbar>
+
+  <ion-list >
+      <ion-item class="custcard" *ngFor="let res of allResult" (click)="goToVideo(res)">
+        <ion-avatar item-start>
+          <img src="{{imagesBaseURl}}{{res.poster_path}}">
+        </ion-avatar>
+        <h2>{{res.title}}</h2>
+        <h3>Rating:&nbsp;{{res.vote_average}} | {{res.release_date}}</h3>
+        <p>{{res.overview}}</p>
+      </ion-item>
+    </ion-list>
+
+</ion-content>

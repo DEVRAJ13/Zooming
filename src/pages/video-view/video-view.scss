@@ -1,0 +1,33 @@
+page-video-view {
+
+    .iframe-box {
+        max-width: 1280px; /* video width */
+        max-height: 720px; /* video height */
+    }
+
+    .size{
+        height: 206px;
+        top: 0px;
+        width: 100%;
+    }
+
+    .mysty{
+        color: #e0e0e0;
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    .card_bg{
+        background-color: #333333;
+    }
+
+   .txt{
+    color: #999;
+    margin-bottom: 6px;
+    font-family: 'Roboto', sans-serif !important;
+   }   
+
+   .dis{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif !important;
+   }
+}

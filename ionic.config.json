@@ -1,0 +1,8 @@
+{
+  "name": "zoomin",
+  "app_id": "00c702a9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

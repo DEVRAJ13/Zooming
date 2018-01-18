@@ -1,0 +1,32 @@
+
+
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="iframe-box">
+  <iframe class="size" [src]="url"  frameborder="0" allowfullscreen ></iframe>
+  </div>
+
+ 
+
+  <ion-list >
+    <ion-item text-wrap class="card_bg">
+    <h1 class="mysty">{{objectItems.title}}</h1>
+    <br>
+    <h3 class="txt">{{objectItems.release_date}}</h3>
+    <p class="txt"><b>Ratings:</b> {{objectItems.vote_average}}</p>
+     <h5 class="mysty">Discription</h5>
+     <p class="txt dis">{{objectItems.overview}}</p>
+    </ion-item>
+  </ion-list>
+          
+</ion-content>

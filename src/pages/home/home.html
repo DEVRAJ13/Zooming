@@ -1,0 +1,126 @@
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Home</ion-title>
+      <ion-buttons end>
+          <button ion-button icon-only>
+            <ion-item class="custom-item">
+              <ion-avatar item-start>
+                <img src="https://scontent.fdel3-1.fna.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/20664113_373135599771375_2457856351412530571_n.jpg?oh=2856854a920be18c16c516574a6ef5e1&oe=5A563257">
+              </ion-avatar>
+            </ion-item>
+          </button>
+
+          <button ion-button icon-only (click)="searchItem()">
+              <ion-icon ios="ios-search" md="md-search"  ></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+  
+
+
+
+
+
+       <ion-slides *ngIf="fiveItemsOnly && fiveItemsOnly.length" style="height:157px;" autoplay="5000" class="slideroption" pager="true"   loop="true" speed="300">
+        <ion-slide   *ngFor="let slide of fiveItemsOnly" (click)="goToVideo(slide)">
+            <img src="{{hdImageBaseURL}}{{slide.backdrop_path}}" />
+              </ion-slide>
+      </ion-slides>
+
+
+      <ion-item class="custom-item">
+          <h4 class="mytitle" text-uppercase>{{category.title_2}} </h4>
+          <ion-scroll scrollX="true"  class="scroll_class">
+           <ion-icon  *ngFor="let rate of top_rate" (click)="goToVideo(rate)">
+                <ion-item class="custom-item">
+                    <ion-avatar item-start>
+                      <img class="custom-img" src="{{imagesBaseURl}}{{rate.backdrop_path}}">
+                    </ion-avatar>
+                    <p class="customfont">{{rate.title}}</p>
+                  </ion-item>
+             </ion-icon>
+          </ion-scroll>
+         </ion-item>
+
+       <ion-card class="custcard">
+      
+        <ion-row> 
+        <ion-col col-7>
+          <ion-row class="custom-row"><b>Movie:&nbsp;</b> {{only_one_movieDetail.original_title}}</ion-row>
+          <ion-row class="custom-row"><b>Rating:&nbsp;</b>{{only_one_movieDetail.vote_average}}</ion-row>
+          <ion-row class="custom-row"><b>Date:&nbsp;</b>{{only_one_movieDetail.release_date}}</ion-row>
+        </ion-col>
+        <ion-col col-5>
+          <ion-thumbnail item-start>
+              <img src="{{imagesBaseURl}}{{only_one_movieDetail.backdrop_path}}">
+          </ion-thumbnail>
+        </ion-col>
+        </ion-row>
+        <ion-card-content >
+        <p class="custom-font">{{only_one_movieDetail.overview}}</p>
+        </ion-card-content>
+        </ion-card>
+
+
+   
+
+
+   
+        <ion-item class="custom-item">
+            <h4 class="mytitle" text-uppercase>{{category.title_1}} </h4>
+            <ion-scroll scrollX="true"  class="scroll_class_list">
+             <ion-icon class="myspace" *ngFor="let upcoming of upcoming_moviesDerail" (click)="goToVideo(upcoming)">
+                <ion-item class="custom-item">
+                          <ion-thumbnail class="on-card" text-wrap>
+                              <img class="thumbnail-img" src="{{imagesBaseURl}}{{upcoming.poster_path}}"> 
+                            <p  class="title" text-nowrap>{{upcoming.title}} </p>
+                            </ion-thumbnail>
+                      
+                        </ion-item>
+               </ion-icon>
+            </ion-scroll>
+           </ion-item>
+
+
+
+           <ion-item class="custom-item">
+              <h4 class="mytitle" text-uppercase>{{category.title_4}} </h4>
+              <ion-scroll scrollX="true"  class="scroll_class_list">
+               <ion-icon class="myspace" *ngFor="let pop of popular_list" (click)="goToVideo(pop)">
+                  <ion-item class="custom-item">
+                            <ion-thumbnail class="on-card" text-wrap>
+                                <img class="thumbnail-img" src="{{imagesBaseURl}}{{pop.poster_path}}"> 
+                              <p class="title" text-nowrap>{{pop.title}}</p>
+                              </ion-thumbnail>
+                          </ion-item>
+                 </ion-icon>
+              </ion-scroll>
+             </ion-item>
+
+
+
+
+             <ion-item class="custom-item">
+                <h4 class="mytitle" text-uppercase>{{category.title_3}} </h4>
+                <ion-scroll scrollX="true"  class="scroll_class_list">
+                 <ion-icon class="myspace" *ngFor="let now of nowplaying_list" (click)="goToVideo(now)">
+                    <ion-item class="custom-item">
+                              <ion-thumbnail class="on-card" text-wrap>
+                                  <img class="thumbnail-img" src="{{imagesBaseURl}}{{now.poster_path}}"> 
+                                <p class="title" text-nowrap>{{now.title}}</p>
+                                </ion-thumbnail>
+                            </ion-item>
+                   </ion-icon>
+                </ion-scroll>
+               </ion-item>
+    
+          
+</ion-content>
