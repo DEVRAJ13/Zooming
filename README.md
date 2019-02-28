@@ -38,16 +38,13 @@ this is it all done.
 
   <img align="right" width="200" height="370" src="https://user-images.githubusercontent.com/24736668/53564679-8d5ace00-3b7d-11e9-9c15-e68d68d578a4.png">
 
-<br>
 
 
 
 
 
 
-## Built With
 
-* [Ionic Framework] - The web framework used
 
 ## Contributing
 
