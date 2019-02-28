@@ -30,6 +30,10 @@ And now open project location on your terminal and just hit command
 
 this is it all done.
 
+![screenshot_20190228-172000](https://user-images.githubusercontent.com/24736668/53564676-8d5ace00-3b7d-11e9-8809-9c52c2eee426.png)
+![screenshot_20190228-172023](https://user-images.githubusercontent.com/24736668/53564679-8d5ace00-3b7d-11e9-9c15-e68d68d578a4.png)
+![screenshot_20190228-172033](https://user-images.githubusercontent.com/24736668/53564680-8df36480-3b7d-11e9-9a98-d324250737fd.png)
+![screenshot_20190228-172059](https://user-images.githubusercontent.com/24736668/53564682-8e8bfb00-3b7d-11e9-9208-8179bfbb3e23.png)
 
 ## Built With
 
